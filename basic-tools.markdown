@@ -10,7 +10,7 @@ things:
 - install Git
 - install Leiningen
 - make sure to have a github account
-- read very carefully the submission instructions
+- read the submission instructions very carefully 
 
 ## Java
 
