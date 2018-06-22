@@ -1,8 +1,8 @@
-% I am a horse in the land of booleans
+% Boolean values
 
 > Any program is only as good as it is useful. <small>Linus Torvalds</small>
 
-## Fork this
+## Note: don't forget to fork it
 
 [https://github.com/iloveponies/i-am-a-horse-in-the-land-of-booleans](https://github.com/iloveponies/i-am-a-horse-in-the-land-of-booleans)
 
@@ -321,7 +321,7 @@ You can use the following functions:
 ~~~
 </exercise>
 
-## Boolean Functions
+## Boolean functions
 
 The common boolean functions in Clojure are `and`, `or` and `not`. These
 roughly match the `&&`, `||` and `!` operators of languages like Java.
@@ -352,7 +352,7 @@ roughly match the `&&`, `||` and `!` operators of languages like Java.
 
 In addition to booleans, `and`, `or` and `not` accept non-boolean values as
 arguments as well. (Remember that `false` and `nil` are falsey and everything
-else is truthy.)
+else is truthy).
 
 By the way, if you have a lot of long parameters to `and`, or any
 function for that matter, indent them like this:
