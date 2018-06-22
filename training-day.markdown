@@ -1,10 +1,10 @@
 % Training day
 
-## Fork this
+## Note: don't forget to fork it!
 
 [https://github.com/iloveponies/training-day](https://github.com/iloveponies/training-day)
 
-If you followed through the instructions in the last section of the
+If you followed the instructions in the last section of the
 previous chapter, you already have this repository forked, cloned and
 ready to go. If you missed the instructions,
 [here](basic-tools.html#how-to-submit-answers-to-exercises) is a link.
@@ -19,7 +19,7 @@ a Leiningen project we have lovingly hand-crafted just for you. It has unit
 tests for the exercises, more about these in a minute. Lets first focus on the
 stuff inside `src`.
 
-If you are using Light Table and you followed the instructions from the last
+If you are using Light Table and you followed the instructions from the previous
 chapter, you should have an Instarepl open for the `training-day` project. If
 you don't, now is a good time to go through those instructions.
 
@@ -191,8 +191,7 @@ user=> (+ 3 4)
 ~~~
 
 We're going to use the convention of writing the expression and the
-result, separated with `;=>`. Quite like how Light Table does it. For
-an example:
+result, separated with `;=>`. Quite like how Light Table does it. For example:
 
 ~~~{.clojure}
 (+ 3 4) ;=> 7
@@ -237,7 +236,7 @@ user=> (+ 3 4) ; I am a comment
 7
 ~~~
 
-## Prefix Syntax
+## Prefix syntax
 
 As you can see above, instead of writing `1 + 2` to calculate the sum
 of one and two, we write `(+ 1 2)`. This syntax applies everywhere in
@@ -327,8 +326,8 @@ name, and the parentheses are moved *after* the method name:
 "Java".charAt(2); //=> 'v'
 ~~~
 
-In Clojure, the function name always goes first, and the parameters come after
-it, including the object, if such is present. The Clojure syntax might take
+In Clojure, the function name always goes first and the parameters come after
+it, including the object if such is present. The Clojure syntax might take
 some time to get used to, but becomes natural after you've written a few
 Clojure programs.
 
@@ -513,7 +512,7 @@ The next section will tell you more about the function `use`.
 
 </info>
 
-## Files and Namespaces
+## Files and namespaces
 
 Code in Clojure projects is structured into namespaces defined in
 files. Usually each file corresponds to a one namespace identified by
@@ -549,7 +548,7 @@ your REPL.
 
 <info>
 
-#### Light Table
+#### LightTable
  
 You need to first connect to the project `training-day`. When you then open an
 instarepl, LigthTable should ask you to which project you want to connect.
@@ -592,7 +591,7 @@ later.
 
 ## Time to submit
 
-Here are two exercises more to keep your fingers warm.
+Here are two more exercises to keep your fingers warm.
 
 <exercise>
 Write the function `(square x)` that takes a number as a parameter and
@@ -624,7 +623,7 @@ All claimed facts (5) have been confirmed.
 ~~~
 
 Don't worry if you haven't figured out all the exercises. You can
-still submit those that you have successfully made. Here is how to do
+still submit those that you have successfully completed. Here is how to do
 it.
 
 1. Create a commit of your changes by running
