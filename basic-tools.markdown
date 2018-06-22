@@ -15,7 +15,7 @@ things:
 ## Java
 
 Clojure runs on JVM, so you need to have the Java JDK installed. On
-Linux this is easily done using the distribution's package manager.
+Linux this is easily done using the distribution package manager.
 
 On Windows you need to download the latest JDK from Oracle's site and
 install it. You also need to add the JDK bin directory to the Path.
@@ -58,7 +58,7 @@ Here's the instructions for installing Leiningen in Linux:
     ~~~
 
 3. Download [this][LeinInstall] script. Put it in the `~/bin`
-   directory created in step 1
+   directory created in step 1.
 
 4. Make the script you just downloaded executable.
 
@@ -90,13 +90,13 @@ about the projects name, version and dependecies among other things.
 
 ## Git
 
-[Git][Git] is an distributed version control system. A fancy name for
+[Git][Git] is a distributed version control system, which is a fancy name for
 a tool that keeps track of changes made to files under a directory
 tree. We use this tool to distribute pre-made Leiningen projects in
 which you can complete the exercises of every chapter. You also use
 Git to submit your answers. If you have any problems with Git, ask.
 
-To install Git on Linux, use your distribution's package manager. In
+To install Git on Linux, use your distribution package manager. In
 Windows, point your browser to [http://git-scm.com/][Git], where you
 can find both the binaries and comprehensive documentation. On
 Windows it's easiest to use the Git-bash that comes with Git.
@@ -132,7 +132,7 @@ want.
 
 ### Be prepared
 
-Lets go through the first part of this process to be ready for the next
+Let's go through the first part of this process to be ready for the next
 chapter.
 
 1. Go to the Github page of the repository of the next chapter. Here is the
@@ -150,7 +150,7 @@ chapter.
     git clone https://github.com/<my-account>/training-day.git
     ~~~
 
-4. A directory `training-day` will be created. Go inside the directory and
+4. A directory called `training-day` will be created. Go inside the directory and
    issue `lein midje`. You should see output that tells you that every test in
    the project has failed.
 
@@ -175,7 +175,7 @@ chapter.
 ## Editor
 
 As a lisp, Clojure requires some support from the text editor to be pleasant to
-write. Luckily a guy named Chris Granger has started a project to create The
+write. Luckily a guy named Chris Granger has started a project to create an
 editor called Light Table. It's still quite beta (you might encounter some
 bugs), but works nicely for your purposes during this course.  [Check it
 out][LightTable]. When in doubt, use this.
@@ -214,7 +214,7 @@ Finally, to start using Light Tables awesome instarepl, do the following:
 3. Light Table might ask you which connection you want the instarepl to use.
    Select the project you connected earlier to (`training-day 1.0.0-SNAPSHOT`)
 
-Now that you have an instarepl open, you can write some clojure to it, like `(+
+Now that you have an instarepl open, you can write some clojure on it, like `(+
 2 3)`. Finally, to use this instarepl to test your implementations in the
 exercise file, you need to `use` the namespace. To do this, write
 
