@@ -1,4 +1,4 @@
-% P-P-P-Pokerface
+% Project: poker hand evaluator
 
 ## Fork this
 
@@ -34,7 +34,7 @@ So, for example, the Queen of Hearts is `"QH"` and the Ace of Spades is
 
 We'll want a couple of helper functions to read the rank and suit of a card.
 
-A useful thing to note is that Strings are sequencable, so you can use
+A useful thing to note is that strings are sequencable, so you can use
 sequence destructuring on them:
 
 ~~~ {.clojure}
@@ -450,7 +450,7 @@ internal representation to something like this, if we wanted to:
 (card "2H") ;=> {:rank 2, :suit :hearts}
 ~~~
 
-## What's Next
+## What's next
 
 Now that you have mastered evaluating poker hands, it's time to understand
 recursion.
