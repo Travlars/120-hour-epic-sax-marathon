@@ -97,7 +97,7 @@ of values. The product of $a$, $b$ and $c$ is $a * b * c$.
 ~~~
 </exercise>
 
-To get a better grasp on what `sum` does, let's see how it's evaluated.
+To get a better grasp on what `sum` does, let's see how it is evaluated.
 
 ~~~ {.clojure}
     (sum '(1 2 3 4))
