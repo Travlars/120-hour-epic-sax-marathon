@@ -1,6 +1,6 @@
 % Style
 
-> Any customer can have a car painted any colour that he wants so long as it
+> Any customer can have a car painted any color that he wants so long as it
 > is black. <small>Henry Ford</small>
 
 An important feature of the code you write is its readability. Code is
@@ -215,7 +215,7 @@ Use `let` liberally to give intermediate results a name. If an
 expression appers in two places, give it a name with `let`. And even if it
 doesn't, using let to name intermediate results makes code easier to read.
 
-## That's All
+## That's all
 
 Now it's time to apply these conventions in a bigger project.
 
