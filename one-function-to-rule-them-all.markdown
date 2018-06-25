@@ -1,4 +1,4 @@
-% One Function to rule them all
+% Reduce 
 
 ## Fork this
 
@@ -149,7 +149,7 @@ Don't use `apply` to implement this function.
 
 </exercise>
 
-## Two Sides of a Coin
+## Two sides of a coin
 
 One can call `reduce` in two different ways:
 
@@ -363,7 +363,7 @@ parameters.
 (+ 1 1 1 1 1) ;=> 5
 ~~~
 
-Not surprisingly, one can define such functions themselve.
+Not surprisingly, one can define such functions themselves.
 
 ~~~clojure
 (defn one-or-two
