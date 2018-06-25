@@ -1,4 +1,4 @@
-% blorg blorg blorg
+% Example: blog
 
 This chapter is special in that there are no exercises. Instead, we will take
 an existing project and study its code and development. Some of the topics
