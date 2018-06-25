@@ -8,7 +8,7 @@
 instructions if you need them. Be sure to fork the repository behind the link
 above.
 
-## Functions as Parameters
+## Functions as parameters
 
 So how do you write a funtion that takes a function as a parameter? Well, for
 starters, let's define a function called `(apply-1 f x)` that should return
@@ -20,7 +20,7 @@ starters, let's define a function called `(apply-1 f x)` that should return
 ~~~
 
 When you take a function as a parameter, you treat it like any other
-parameter. In clojure functions are just normal values and you can pass them
+parameter. In Clojure, functions are just normal values and you can pass them
 around however you like. Calling a function parameter works like calling any
 other function.
 
@@ -38,7 +38,7 @@ Write the function `(sum-f f g x)` that returns `(+ (f x) (g x))`.
 ~~~
 </exercise>
 
-## Functions as Return Values
+## Functions as return values
 
 A function that returns a boolean value (`false` or `true`) is called a
 predicate. Usually their name ends in a question mark `?`. We've already
@@ -74,7 +74,7 @@ Write the functions `(less-than n)` and `(equal-to n)` that work like
 ~~~
 </exercise>
 
-### Keywords and Sets as Predicates
+### Keywords and sets as predicates
 
 When you have a bunch of maps, you often want to filter those that have a
 certain `:keyword` as a key. Most of the time, you can just use the `:keyword`
@@ -155,7 +155,7 @@ and returns a predicate that takes `x` as a parameter and
 ~~~
 </exercise>
 
-## Functions that both Take Functions as Parameters and Return Functions
+## Functions that both take functions as parameters and return functions
 
 Sometimes you have a predicate that almost does what you want. For an example,
 suppose I want to filter all non-negative values from a sequence. There's
@@ -355,7 +355,7 @@ Write the function `(HAS-ALL-THE-AWARDS? book awards)` that returns `true` if
 ~~~
 </exercise>
 
-## And Then There Were Some
+## And then there were some
 
 Finally, when you wan't to know if at least one element of a sequence passes a
 predicate, there is `(some pred a-seq)` which returns a truthy value if `pred`
@@ -381,7 +381,7 @@ useful, but sometimes you need to be careful with it.
 ~~~
 
 <exercise>
-Write you own implementation for `some` called `my-some`.
+Write your own implementation for `some` called `my-some`.
 
 Hint: You might find `map`, `filter` and `first` useful (you won't necessarily
 need them all).
