@@ -1,7 +1,7 @@
 % Structured data
 
 <info>
-The following web pages are good references to Clojure builtins and data
+The following web pages are good references to Clojure built-ins and data
 structures:
 
 - [ClojureDocs]
@@ -113,17 +113,17 @@ Scalar values are the regular, singular simple values like `42`, `"foo"` or
 ------------------------------------------------------------------------------
 Type            Examples             Description
 ----            --------             -----------------------------------------
-Numbers         `42`, `3/2`, `2.1`   Numbers include integers, fractions,
-                                     and floats.
+Numbers         `42`, `3/2`, `2.1`   Numbers including integers, fractions,
+                                     and floats
 
-Strings         `"foo"`              Text values.
+Strings         `"foo"`              Text values
 
 Characters      `\x`, `\y`, `\√`     A single characer is written with a
-                                     preceding `\`.
+                                     preceding `\`
 
-Keywords        `:foo`, `:?`         Values often used as map keys.
+Keywords        `:foo`, `:?`         Values often used as map keys
 
-Booleans        `true`, `false`      Boolean values.
+Booleans        `true`, `false`      Boolean values
 
 ------------------------------------------------------------------------------
 
@@ -198,7 +198,7 @@ Write the function `(cutify v)` that takes a vector as a parameter and adds
 <!-- "> -->
 </exercise>
 
-### Vectors: A Postmodern Deconstruction
+### Vectors: A postmodern deconstruction
 
 Another way of extracting values from a vector is by *destructuring* it:
 
@@ -248,7 +248,7 @@ to its parameters. Instead, it gives names to their first two elements by
 destructuring the parameters. We could have also destructured the parameters
 with a `let`.
 
-## Thinking With Boxes
+## Thinking with boxes
 
 Let's define a simple representation for a two-dimensional point. It will simply
 be a pair (2-element vector) of two numbers.
@@ -328,7 +328,7 @@ Remember that you can give `<=` multiple parameters. `(<= x y z)` returns
 
 Hint: `and` is useful.
 
-use destructuring.
+Use destructuring.
 
 ~~~{.clojure}
 (contains-point? (rectangle [0 0] [2 2])
@@ -471,7 +471,7 @@ multiple authors, otherwise `false`.
 ~~~
 </exercise>
 
-### Adding Values to a Map
+### Adding values to a map
 
 `(assoc a-map a-key a-value)` sets the value of `a-key` in `a-map` to be `a-value`.
 
@@ -740,7 +740,7 @@ Using our earlier examples:
 ~~~
 </exercise>
 
-Okey, so now that `map` has been gone over, let's see the definition of
+Okay, so now that `map` has been gone over, let's see the definition of
 `all-author-names` again.
 
 ~~~{.clojure}
@@ -798,7 +798,7 @@ to `concat` as arguments.
 
 No worries, there is a way to do this. Let's check out `apply`.
 
-### Apply Now, Redux
+### Apply now, redux
 
 `(apply function a-seq)` applies `function` to the arguments in `a-seq`. Here's an example:
 
@@ -999,7 +999,7 @@ Calling our function returns the desired set:
 ;     "Octavia E. Butler" "Daniel Friedman"}
 ~~~
 
-## Representing Books, Take Two
+## Representing books, take two
 
 Now I would like to ask whether `little-schemer` has `felleisen` as an author
 or not. This turns out to be problematic. There is no function on vectors that
@@ -1138,7 +1138,7 @@ and uses `authors`.
 ~~~
 </exercise>
 
-### String Representation for Books
+### String representation for books
 
 Now that we have defined these books, I would like to have a readable string
 representation for them. Let's start by defining a representation for a single
