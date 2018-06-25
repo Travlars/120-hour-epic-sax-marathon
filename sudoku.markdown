@@ -1,4 +1,4 @@
-% Sudoku
+% Proejct: Sudoku solver
 
 ## Fork this
 
@@ -6,7 +6,7 @@
 
 ## Fight!
 
-First of all, we need to have a representation for sudoku boards. Here is one.
+First of all, we need to have a representation for Sudoku boards. Here is one.
 
 ~~~ {.clojure}
 (board [[5 3 0 0 7 0 0 0 0]
@@ -20,7 +20,7 @@ First of all, we need to have a representation for sudoku boards. Here is one.
         [0 0 0 0 8 0 0 7 9]])
 ~~~
 
-Here `0` is used to encode an empty square in a sudoku board.
+Here `0` is used to encode an empty square in a Sudoku board.
 
 The `board` function is intended to transform a nested vector structure to
 some internal representation. Since these nested vectors work just fine for
@@ -40,16 +40,16 @@ Using `identity`, we can define `board` easily:
 (def board identity)
 ~~~
 
-You're going to need the set of numbers used in sudoku often, so let's define
+You're going to need the set of numbers used in Sudoku often, so let's define
 them as a set:
 
 ~~~ {.clojure}
 (def all-values #{1 2 3 4 5 6 7 8 9})
 ~~~
 
-In sudoku, one needs to fill a board so that every line, every column and
+In Sudoku, one needs to fill a board so that every line, every column and
 every block has the numbers from 1 to 9 exactly once. Blocks are 3x3 areas
-inside the sudoku board.
+inside the Sudoku board.
 
 ~~~ {.clojure}
 ;[[5 3 0 | 0 7 0 | 0 0 0]
@@ -100,7 +100,7 @@ It works with everything that supports get, including maps and vectors.
 There are two other functions for dealing with nested structures, `assoc-in`
 and `update-in`. We will talk about `assoc-in` in a bit.
 
-Here is an example sudoku board together with its solution:
+Here is an example Sudoku board together with its solution:
 
 ~~~ {.clojure}
 (def sudoku-board
@@ -152,7 +152,7 @@ functions to figure this out.
 
 <exercise>
 Write the function `(row-values board coordinates)` that returns a set with
-all numbers on the row of the coordinates
+all numbers on the row of the coordinates.
 
 Remember that you can use destructing inside the parameter vector to get the
 row.
@@ -165,7 +165,7 @@ row.
 
 <exercise>
 Write the function `(col-values board coordinates)` that returns a set with
-all numbers on the col of the coordinates
+all numbers on the col of the coordinates.
 
 ~~~ {.clojure}
 (col-values sudoku-board [0 2]) ;=> #{0 8}
@@ -272,7 +272,7 @@ Remember that we already defined the set `all-values`.
 ~~~
 </exercise>
 
-Next, let's write a function to figure out if a sudoku board is completely
+Next, let's write a function to figure out if a Sudoku board is completely
 filled.
 
 <exercise>
@@ -294,7 +294,7 @@ in `set`.
 Now that we can check if a board is full, it would be nice to know if the
 solution is valid.
 
-A sudoku is valid if each row, each column and each block contains the numbers
+A Sudoku is valid if each row, each column and each block contains the numbers
 from 1 to 9 exactly once. Let's write functions for checking each of these
 conditions.
 
@@ -384,7 +384,7 @@ Write the function `(blocks board)` that returns the values of each block in
 
 Now we can get the values used in every row, column and block. Let's write
 functions that check if every row, column and block is valid as per the rules
-of sudoku.
+of Sudoku.
 
 <exercise>
 Write the function `(valid-rows? board)` that returns `true` if every row in
@@ -417,7 +417,7 @@ solution.
 
 <exercise>
 Write the function `(valid-solution? board)` that returns `true` if `board` is
-a valid solution to sudoku.
+a valid solution to Sudoku.
 
 ~~~{.clojure}
 (valid-solution? solved-board)  ;=> truthy
@@ -426,7 +426,7 @@ a valid solution to sudoku.
 </exercise>
 
 Now we can verify whether or not a solution is valid. However, if we want to
-actually solve a sudoku, we need to be able to modify a partial solution.
+actually solve a Sudoku puzzle, we need to be able to modify a partial solution.
 
 Earlier we saw how useful `get-in` can be when indexing nested structures.
 Theres a similar function for changing nested structures, called `assoc-in`.
@@ -442,7 +442,7 @@ Theres a similar function for changing nested structures, called `assoc-in`.
 ~~~
 
 Now we can write a function to change a single value in our representation of
-a sudoku.
+a Sudoku puzzle.
 
 <exercise>
 Write the function `(set-value-at board coord new-value)` that changes the
@@ -476,7 +476,7 @@ value at `coord` in `board` to `new-value`.
 </exercise>
 
 Now that we can change the board, the next obstacle is figuring out what to
-change. Now we need to find an empty point in the sudoku board.
+change. Now we need to find an empty point in the Sudoku board.
 
 <exercise>
 Write the function `(find-empty-point board)` that returns coordinates to an
@@ -492,7 +492,7 @@ solution, return `nil`.
 
 Let's take a small detour and see an example of backtracking search.
 
-### Subset Sum
+### Subset sum
 
 Subset sum is a classic problem. Here's how it goes. You are given:
 
@@ -531,7 +531,7 @@ check if we have found a valid solution. Here it's checked with
     [current-set]
 ~~~
 
-If we have found a valid solution, return it in a vector (We'll see soon why
+If we have found a valid solution, return it in a vector (we'll soon see why
 in a vector). Okay, so if we're not done yet, what are our options? Well, we
 need to try adding some element of `a-set` into `current-set` and try again.
 What are the possible elements for this? They are those that are not yet in
@@ -584,13 +584,13 @@ And due to the way Clojure uses laziness, this actually cuts the computation
 after a solution is found (well, to be exact, after 32 solutions have been
 found due to the way Clojure chunks lazy sequences).
 
-### Solving Sudokus
+### Solving Sudoku
 
-It's finally time to write the search for a solution to sudokus.
+It's finally time to write the search for a solution to Sudoku.
 
 <exercise>
-Write the function `(solve board)` which takes a sudoku board as a parameter
-and returns a valid solution to the given sudoku.
+Write the function `(solve board)` which takes a Sudoku board as a parameter
+and returns a valid solution to the given Sudoku.
 
 ~~~{.clojure}
   (solve sudoku-board) => solved-board
