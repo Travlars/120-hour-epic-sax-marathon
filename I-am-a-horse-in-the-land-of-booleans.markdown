@@ -2,13 +2,12 @@
 
 > Any program is only as good as it is useful. <small>Linus Torvalds</small>
 
-## Note: don't forget to fork it
+## Fork this
 
 [https://github.com/iloveponies/i-am-a-horse-in-the-land-of-booleans](https://github.com/iloveponies/i-am-a-horse-in-the-land-of-booleans)
 
-[Here](basic-tools.html#how-to-submit-answers-to-exercises) are the
-instructions if you need them. Be sure to fork the repository behind
-the link above.
+Be sure to fork the repository behind the link above. [Here](basic-tools.html#how-to-submit-answers-to-exercises) are the
+instructions if you need them. 
 
 ## If then else
 
