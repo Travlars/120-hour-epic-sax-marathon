@@ -1,6 +1,6 @@
 % Training day
 
-## Note: don't forget to fork it!
+## Fork this
 
 [https://github.com/iloveponies/training-day](https://github.com/iloveponies/training-day)
 
